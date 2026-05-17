@@ -1,5 +1,7 @@
 # 🎭 Persona Simulator
 
+![Persona Simulator](./assets/thumbnail.png)
+
 ## Tagline-en
 
 Through AI simulation, discover the moments when a brand becomes memorable in a customer’s daily life.
