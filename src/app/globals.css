@@ -1,26 +1,234 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Persona Simulator — Cozy Dashboard 디자인 시스템
+ * Pastel base + 게임 같은 마이크로 accent.
+ * 페르소나 5명 = chart-1..5, Funnel 5단계 = funnel-* .
+ */
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-sans);
   --font-mono: var(--font-geist-mono);
+  --font-heading: var(--font-sans);
+
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+
+  /* ─── App semantic tokens ─── */
+  --color-life: var(--life);
+  --color-life-foreground: var(--life-foreground);
+  --color-exposure: var(--exposure);
+  --color-exposure-foreground: var(--exposure-foreground);
+  --color-spark: var(--spark);
+  --color-spark-foreground: var(--spark-foreground);
+
+  /* Funnel stages */
+  --color-funnel-unaware: var(--funnel-unaware);
+  --color-funnel-aware: var(--funnel-aware);
+  --color-funnel-consider: var(--funnel-consider);
+  --color-funnel-intent: var(--funnel-intent);
+  --color-funnel-purchase: var(--funnel-purchase);
+  --color-funnel-advocate: var(--funnel-advocate);
+
+  /* Mood */
+  --color-mood-joy: var(--mood-joy);
+  --color-mood-calm: var(--mood-calm);
+  --color-mood-tired: var(--mood-tired);
+  --color-mood-stressed: var(--mood-stressed);
+
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+:root {
+  /* Warm cream base + deep cocoa text. */
+  --background: oklch(0.985 0.012 85);
+  --foreground: oklch(0.24 0.025 60);
+
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.24 0.025 60);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.24 0.025 60);
+
+  /* Primary = deep indigo (trust, marketer's tool). */
+  --primary: oklch(0.43 0.13 270);
+  --primary-foreground: oklch(0.985 0.01 85);
+
+  /* Secondary = soft sage. */
+  --secondary: oklch(0.93 0.03 150);
+  --secondary-foreground: oklch(0.3 0.05 150);
+
+  --muted: oklch(0.95 0.015 80);
+  --muted-foreground: oklch(0.5 0.025 70);
+
+  /* Accent = warm coral (the "game pop"). */
+  --accent: oklch(0.85 0.13 40);
+  --accent-foreground: oklch(0.25 0.08 40);
+
+  --destructive: oklch(0.62 0.22 28);
+
+  --border: oklch(0.9 0.015 80);
+  --input: oklch(0.93 0.015 80);
+  --ring: oklch(0.6 0.14 270);
+
+  /* Persona/category palette — 5 distinct pastels. */
+  --chart-1: oklch(0.74 0.14 30);   /* coral     */
+  --chart-2: oklch(0.74 0.13 150);  /* mint      */
+  --chart-3: oklch(0.74 0.13 250);  /* periwinkle*/
+  --chart-4: oklch(0.78 0.13 80);   /* mustard   */
+  --chart-5: oklch(0.74 0.13 320);  /* lilac     */
+
+  --radius: 0.85rem;
+
+  --sidebar: oklch(0.97 0.015 80);
+  --sidebar-foreground: oklch(0.24 0.025 60);
+  --sidebar-primary: oklch(0.43 0.13 270);
+  --sidebar-primary-foreground: oklch(0.985 0.01 85);
+  --sidebar-accent: oklch(0.92 0.025 80);
+  --sidebar-accent-foreground: oklch(0.3 0.06 60);
+  --sidebar-border: oklch(0.9 0.015 80);
+  --sidebar-ring: oklch(0.6 0.14 270);
+
+  /* App semantic */
+  --life: oklch(0.95 0.01 80);                /* 일반 LifeEntry 카드 배경 */
+  --life-foreground: oklch(0.4 0.02 70);
+  --exposure: oklch(0.88 0.12 30);            /* Exposure 카드 강조 */
+  --exposure-foreground: oklch(0.25 0.08 30);
+  --spark: oklch(0.85 0.16 85);               /* 게임감 스파클 */
+  --spark-foreground: oklch(0.3 0.08 85);
+
+  /* Funnel stages — gradient cool→warm→success */
+  --funnel-unaware: oklch(0.85 0.02 70);
+  --funnel-aware: oklch(0.78 0.08 250);
+  --funnel-consider: oklch(0.78 0.1 200);
+  --funnel-intent: oklch(0.78 0.13 80);
+  --funnel-purchase: oklch(0.7 0.16 150);
+  --funnel-advocate: oklch(0.7 0.18 320);
+
+  /* Mood */
+  --mood-joy: oklch(0.82 0.16 85);
+  --mood-calm: oklch(0.82 0.1 200);
+  --mood-tired: oklch(0.75 0.04 250);
+  --mood-stressed: oklch(0.72 0.16 30);
+}
+
+.dark {
+  --background: oklch(0.16 0.02 60);
+  --foreground: oklch(0.94 0.015 85);
+
+  --card: oklch(0.22 0.025 60);
+  --card-foreground: oklch(0.94 0.015 85);
+  --popover: oklch(0.22 0.025 60);
+  --popover-foreground: oklch(0.94 0.015 85);
+
+  --primary: oklch(0.7 0.15 270);
+  --primary-foreground: oklch(0.16 0.03 60);
+
+  --secondary: oklch(0.32 0.04 150);
+  --secondary-foreground: oklch(0.94 0.015 85);
+
+  --muted: oklch(0.26 0.02 70);
+  --muted-foreground: oklch(0.7 0.025 70);
+
+  --accent: oklch(0.55 0.16 40);
+  --accent-foreground: oklch(0.96 0.02 60);
+
+  --destructive: oklch(0.65 0.21 28);
+
+  --border: oklch(1 0 0 / 12%);
+  --input: oklch(1 0 0 / 14%);
+  --ring: oklch(0.7 0.15 270);
+
+  --chart-1: oklch(0.72 0.16 30);
+  --chart-2: oklch(0.72 0.14 150);
+  --chart-3: oklch(0.72 0.14 250);
+  --chart-4: oklch(0.76 0.14 80);
+  --chart-5: oklch(0.72 0.14 320);
+
+  --sidebar: oklch(0.2 0.025 60);
+  --sidebar-foreground: oklch(0.94 0.015 85);
+  --sidebar-primary: oklch(0.7 0.15 270);
+  --sidebar-primary-foreground: oklch(0.16 0.03 60);
+  --sidebar-accent: oklch(0.28 0.03 70);
+  --sidebar-accent-foreground: oklch(0.94 0.015 85);
+  --sidebar-border: oklch(1 0 0 / 12%);
+  --sidebar-ring: oklch(0.7 0.15 270);
+
+  --life: oklch(0.26 0.02 70);
+  --life-foreground: oklch(0.84 0.02 80);
+  --exposure: oklch(0.48 0.15 30);
+  --exposure-foreground: oklch(0.96 0.02 30);
+  --spark: oklch(0.7 0.18 85);
+  --spark-foreground: oklch(0.16 0.03 60);
+
+  --funnel-unaware: oklch(0.4 0.02 70);
+  --funnel-aware: oklch(0.5 0.1 250);
+  --funnel-consider: oklch(0.5 0.12 200);
+  --funnel-intent: oklch(0.55 0.15 80);
+  --funnel-purchase: oklch(0.6 0.18 150);
+  --funnel-advocate: oklch(0.6 0.2 320);
+
+  --mood-joy: oklch(0.7 0.18 85);
+  --mood-calm: oklch(0.7 0.12 200);
+  --mood-tired: oklch(0.55 0.04 250);
+  --mood-stressed: oklch(0.6 0.18 30);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
   }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+  html {
+    @apply font-sans;
+  }
+  /* iOS Safari: input < 16px 시 포커스 시 자동 확대 방지 (글로벌 가이드라인) */
+  input,
+  select,
+  textarea {
+    font-size: max(16px, 1rem);
+  }
 }
