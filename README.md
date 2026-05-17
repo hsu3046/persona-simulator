@@ -2,29 +2,80 @@
 
 ## Tagline-en
 
-Watch AI personas live a full day reacting to your ads — then pause and ask them why they almost bought, why they didn't, and what almost worked.
+Through AI simulation, discover the moments when a brand becomes memorable in a customer’s daily life.
 
 ## Tagline-ko
 
-마케터의 가설을 24시간짜리 가상 고객 라이프로 재생합니다. 페르소나가 광고를 보고 무시하고, 친구에게 묻고, 마음이 흔들리는 그 순간을 일기처럼 따라가다 잠시 멈춰 직접 물어볼 수 있는 시뮬레이터.
+AI 시뮬레이션을 통해, 고객의 하루 속에서 브랜드가 기억되는 순간을 찾다.
 
 ## Tagline-ja
 
-マーケターの仮説を24時間の仮想顧客ライフとして再生する。ペルソナが広告を見て無視し、友人に尋ね、心が揺らぐその瞬間を日記のように追いながら、一時停止して直接質問できるシミュレーター。
+AIシミュレーションを通じて、顧客の日常の中でブランドが記憶に刻まれる瞬間を辿る。
 
 ---
 
 ## Summary-en
 
-A/B testing a campaign before launch usually means slow surveys or expensive focus groups — and either way, real customers stay invisible until it's too late. Persona Simulator drops your product into the lives of synthetic personas grounded in real marketing science (Krugman frequency, Cialdini influence, Byron Sharp mental availability) and plays out their day-by-day exposure, internal reasoning, and funnel movement as a readable life log. When something interesting happens, pause time and interview the persona about that exact moment. The result feels less like a dashboard and more like watching a play, then sitting down for coffee with the lead character.
+Before launching a new campaign into the world, there are always questions we want answered.
+Will people genuinely respond to this message?
+What kind of feeling will our brand leave behind in their memory?
+
+Traditional surveys often fail to capture what consumers truly think, while focus group interviews can be costly and time-consuming. In the end, the most honest reactions usually emerge only after a campaign has already gone live.
+
+Persona Simulator uses multiple generative AI models to create virtual consumers and simulate their lives across a day, a week, or even an entire month. Grounded in proven marketing science frameworks, it helps predict how products and advertising messages may influence real consumer perception and behavior before launch.
+
+The moment someone casually scrolls past your ad on Instagram during their morning commute.
+The moment a coworker’s comment over lunch subtly changes their perception of your brand.
+And the moment a customer finally moves to the next stage of the purchase journey.
+Every step of that process is captured as a life log.
+
+And when a particular moment stands out, you can pause the simulation and begin an interview right there.
+“Why did you scroll past that ad just now?”
+The persona responds naturally, explaining the reasoning behind the decision based on the surrounding context, emotions, and state of mind at that exact moment.
+
+When personas are carefully designed and paired with AI models suited to specific roles, the experience goes far beyond predicting click-through rates or preference scores. It becomes a new form of qualitative research: one that allows you to follow a person’s everyday life, understand the context in which brands are encountered and remembered, and closely examine the emotions and judgments that shape consumer decisions.
 
 ## Summary-ko
 
-캠페인 출시 전 A/B 검증은 보통 느린 설문이나 비싼 FGI — 어느 쪽이든 진짜 고객은 늦게야 보입니다. Persona Simulator 는 제품과 채널 plan 을 입력하면, 실제 마케팅 학문 (Krugman 빈도 효과, Cialdini 영향력 원리, Byron Sharp mental availability) 에 기반한 가상 페르소나의 하루를 라이프 로그로 재생합니다. 출근길 인스타그램에서 광고를 흘려보내는 순간, 점심 시간 동료의 추천에 마음이 흔들리는 순간, funnel 단계가 바뀌는 순간 — 모두 1인칭 일기로 흐릅니다. 흥미로운 시점에서 일시정지하면 페르소나가 "왜 그랬는지" 직접 답합니다. 대시보드가 아닌, 연극 한 편 보고 주인공과 커피 마시는 경험에 가깝습니다.
+새로운 캠페인을 세상에 내놓기 전, 우리는 늘 확인하고 싶어 합니다.
+사람들은 이 메시지에 정말 반응할까.
+우리 브랜드를 어떤 감정으로 기억하게 될까.
+
+하지만 설문조사는 때때로 유저의 진짜 속마음과 어긋나고, FGI는 비용과 시간의 제약이 큽니다. 결국 가장 솔직한 고객의 반응은 언제나 출시 이후에야 드러나곤 합니다.
+
+Persona Simulator는 다양한 생성형 AI를 활용해 가상의 고객을 만들고, 그들의 24시간, 일주일, 1달을 정교하게 시뮬레이션합니다. 시장에서 검증된 마케팅 과학 이론을 바탕으로, 제품과 광고 메시지가 실제 소비자의 인식과 행동에 어떤 영향을 미칠지 사전에 예측할 수 있습니다.
+
+출근길 인스타그램 피드 속에서 우리 광고를 무심코 지나치는 순간.
+점심시간 동료의 말 한마디로 브랜드에 대한 인상이 달라지는 순간.
+그리고 마침내 구매 여정의 단계가 전환되는 순간까지.
+이 모든 과정은 라이프 로그 형태로 기록됩니다.
+
+흐름을 따라가다 유난히 시선이 머무는 장면이 있다면, 그 자리에서 바로 인터뷰를 시작할 수 있습니다.
+“왜 방금 그 광고를 그냥 지나쳤나요?”
+페르소나는 자신이 처했던 상황과 심리를 바탕으로, 그 순간의 이유를 자연스럽게 설명합니다.
+
+페르소나를 정교하게 설계하고, 목적에 맞는 AI에 역할을 부여하면, 이는 단순한 클릭률이나 선호도 예측에 머물지 않습니다. 한 사람의 일상을 따라가며 브랜드가 어떤 맥락에서 소비되고 기억되는지 관찰하고, 특정 순간의 감정과 판단까지 깊이 있게 들여다볼 수 있는 새로운 형태의 정성 조사가 됩니다.
 
 ## Summary-ja
 
-キャンペーンのA/B検証は通常、遅いアンケートか高価なFGI — どちらにせよ本当の顧客は手遅れになるまで見えません。Persona Simulator は製品とチャネルプランを入力すると、実際のマーケティング学問 (Krugmanの頻度効果、Cialdiniの影響力原理、Byron Sharpのメンタル・アベイラビリティ) に基づいた仮想ペルソナの一日をライフログとして再生します。通勤のインスタで広告を見過ごす瞬間、ランチで同僚に勧められて心が揺れる瞬間、ファネル段階が動く瞬間 — すべて一人称の日記として流れます。気になる時点で一時停止すれば、ペルソナが「なぜそうしたのか」を直接答えてくれます。ダッシュボードではなく、一本の演劇を観てから主役とコーヒーを飲む体験に近い形です。
+新しいキャンペーンを世の中に出す前に、私たちはいつも確かめたくなります。
+このメッセージは本当に人の心に届くのか。
+人々は私たちのブランドを、どんな印象や感情とともに記憶するのか。
+
+しかし、アンケート調査だけではユーザーの本音を捉えきれないことがありますし、FGI（グループインタビュー）は時間やコストの負担も小さくありません。結局、本当に率直な顧客の反応は、リリース後にはじめて見えてくることが少なくありません。
+
+Persona Simulatorは、複数の生成AIを活用して仮想の顧客を生成し、その人たちの24時間、1週間、1か月の行動や思考を精密にシミュレーションします。マーケティングサイエンスの実証理論をもとに、商品や広告メッセージが実際の消費者認知や行動にどのような影響を与えるのかを、事前に予測することができます。
+
+通勤中に眺めるInstagramのフィードで、広告が何気なくスルーされる瞬間。
+ランチタイムの同僚のひと言によって、ブランドの印象が変わる瞬間。
+そして、購買ファネルのステージが動き出す瞬間まで。
+その一連の流れは、ライフログとして記録されていきます。
+
+シミュレーションを追っていく中で、特に気になる場面があれば、その場でインタビューを始めることもできます。
+「なぜ、今の広告はそのまま見過ごしたのですか？」
+ペルソナは、その時の状況や心理を踏まえながら、自然な言葉で理由を語ります。
+
+ペルソナを丁寧に設計し、目的に応じたAIへ役割を与えることで、これは単なるクリック率や好感度の予測にとどまりません。ひとりの生活を追体験するように、ブランドがどのような文脈で接触され、記憶され、意思決定につながっていくのかを観察できる、新しい形の定性調査へと変わっていきます。
 
 ---
 
